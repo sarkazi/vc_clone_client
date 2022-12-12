@@ -1,0 +1,28 @@
+.tabsItems {
+  display: flex;
+  column-gap: 10px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  li {
+    white-space: nowrap;
+  }
+  li button {
+    font-weight: 400;
+    font-size: 15px;
+  }
+  li.active {
+    border-bottom: 3px solid #4086e0;
+  }
+  li.active button {
+    font-weight: 500;
+  }
+  & button {
+    text-transform: unset;
+    color: black;
+  }
+  li:not(.active):hover button {
+    color: rgb(233, 0, 43);
+  }
+}

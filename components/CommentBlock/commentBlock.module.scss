@@ -1,0 +1,50 @@
+.commentsBlock {
+  grid-column-start: 4;
+  padding-top: 20px;
+  transition: 1s all ease-in-out;
+  height: 100vh;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @media (max-width: 1000px) {
+    & {
+      display: none;
+    }
+  }
+  .wrapper {
+    padding-top: 10px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    .buttonBlock {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      margin-bottom: 35px;
+      h2 {
+        font-size: 18px;
+        font-weight: 500;
+      }
+      svg {
+        transform: rotate(270deg);
+      }
+    }
+    .buttonBlock.hide {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      transform: rotate(270deg);
+      transform-origin: right;
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    .commentsItems {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+}

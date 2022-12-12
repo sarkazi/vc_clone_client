@@ -1,0 +1,146 @@
+$chat-border-color: rgb(208, 208, 208);
+$button-send-disable: rgb(208, 208, 208);
+$button-send-active: #4086e0;
+
+.messageBlock {
+  background-color: #fff;
+  grid-column-start: 2;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-areas: "search about" "left right";
+  grid-template-rows: auto 1fr;
+  .wrapper {
+    overflow: hidden;
+    position: relative;
+
+    .leftChat {
+      border-right: 1px solid $chat-border-color;
+      height: 100%;
+      //padding: 50px 0 0;
+      overflow-y: scroll;
+      grid-area: left;
+      border-bottom: 1px solid $chat-border-color;
+      position: relative;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .messageBody {
+        .listFriends {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  .rightChat {
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .mainChatWrapper {
+      overflow-y: scroll;
+      flex: 1 0 auto;
+      //&::-webkit-scrollbar {
+      //  display: none;
+      //}
+      .mainChat {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        .dateChat {
+          align-self: center;
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    .bottomInput {
+      border-top: 1px solid $chat-border-color;
+      padding: 10px 20px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      column-gap: 20px;
+      align-items: center;
+      svg {
+        color: rgb(89, 89, 89);
+        transform: rotate(45deg);
+      }
+      svg:first-child {
+        transform: rotate(45deg);
+      }
+      svg:last-child {
+        transform: rotate(0);
+        transform: scale(0.8);
+        color: white;
+      }
+      .buttonSend {
+        background-color: $button-send-active;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  .about {
+    grid-area: about;
+    border-bottom: 1px solid $chat-border-color;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    .avatarBlockAbout {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      .mainBody {
+        row-gap: 5px;
+        span {
+          font-size: 15px;
+          font-weight: 700;
+        }
+        p {
+          font-size: 12.5px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  .search {
+    grid-area: search;
+    border-bottom: 1px solid $chat-border-color;
+    border-right: 1px solid $chat-border-color;
+    display: flex;
+    align-items: center;
+    .labelInput {
+      display: grid;
+      align-items: center;
+      column-gap: 10px;
+      padding: 12px 20px;
+      grid-template-columns: auto 1fr;
+      svg {
+        color: rgb(87, 87, 87);
+        transform: scale(0.8);
+      }
+      input {
+        &::placeholder {
+          width: 100%;
+          font-size: 15px;
+          color: rgb(67, 67, 67);
+        }
+      }
+    }
+  }
+}

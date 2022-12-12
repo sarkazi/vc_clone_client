@@ -1,0 +1,22 @@
+.btnAdd {
+  background-color: #fff;
+  padding: 6px;
+  box-shadow: 0 0 3px rgb(203, 203, 203);
+  &:hover .svgRemove {
+    display: unset;
+  }
+  &:hover .svgCheck {
+    display: none;
+  }
+  svg {
+    fill: black;
+    transform: scale(0.9);
+  }
+  .svgCheck {
+    fill: rgb(0, 177, 0);
+  }
+  .svgRemove {
+    fill: rgb(236, 0, 0);
+    display: none;
+  }
+}

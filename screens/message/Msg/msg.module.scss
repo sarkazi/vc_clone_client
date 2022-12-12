@@ -1,0 +1,28 @@
+.myMessage {
+  background: linear-gradient(
+    -45deg,
+    #6d77ff 11.19%,
+    #8753ff 39.94%,
+    #d430dd 100%
+  );
+  padding: 10px 50px 10px 20px;
+  align-self: flex-start;
+  border-radius: 12px 12px 12px 2px;
+  color: white;
+  max-width: 40%;
+}
+.foreignMessage {
+  background: linear-gradient(
+    35deg,
+    #3aebff 11.19%,
+    #15ff9d 39.94%,
+    #d6bd00 100%
+  );
+  padding: 10px 20px;
+  align-self: flex-end;
+  border-radius: 12px 12px 0 12px;
+  box-shadow: 1px 1px 30px 3px rgb(239, 255, 231);
+  max-width: 40%;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}

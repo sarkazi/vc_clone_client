@@ -1,0 +1,122 @@
+.mainContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 620px) {
+    padding-bottom: 40px;
+  }
+  .main {
+    //  grid-template-columns: 3fr 5fr 4fr;
+    position: relative;
+    flex: 0 1 auto;
+    .wrapper {
+      display: grid;
+      grid-template-columns: 3fr 5fr 2fr minmax(150px, 2fr);
+      &.newsPage {
+        grid-template-columns: auto 8fr 0 minmax(150px, 2fr);
+        column-gap: 20px;
+        @media (max-width: 1000px) {
+          & {
+            grid-template-columns: auto 1fr;
+          }
+        }
+        @media (max-width: 750px) {
+          & {
+            column-gap: 0;
+          }
+        }
+      }
+      &.profilePage {
+        grid-template-columns: 3fr 7.5fr 1.5fr;
+        padding-bottom: 20px;
+        @media (max-width: 1100px) {
+          & {
+            grid-template-columns: auto 1fr;
+            column-gap: 30px;
+          }
+        }
+        @media (max-width: 750px) {
+          & {
+            grid-template-columns: 1fr;
+            column-gap: 0;
+          }
+        }
+      }
+      &.ratingPage {
+        grid-template-columns: 3fr 5fr 2fr minmax(150px, 2fr);
+        padding-bottom: 20px;
+        align-items: flex-start;
+        @media (max-width: 1000px) {
+          & {
+            grid-template-columns: auto 1fr;
+          }
+        }
+      }
+      &.profileSettingsPage {
+        grid-template-columns: 3fr 5fr 2fr minmax(150px, 2fr);
+        @media (max-width: 1000px) {
+          & {
+            grid-template-columns: auto 1fr minmax(0, 100px);
+          }
+        }
+        @media (max-width: 750px) {
+          & {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+      &.messagePage {
+        grid-template-columns: auto 1fr;
+        column-gap: 20px;
+      }
+      @media (max-width: 1000px) {
+        & {
+          grid-template-columns: auto 1fr;
+          column-gap: 20px;
+        }
+      }
+      @media (max-width: 750px) {
+        & {
+          grid-template-columns: 1fr;
+          column-gap: unset;
+        }
+      }
+    }
+  }
+  .navMobile {
+    display: none;
+  }
+  @media (max-width: 620px) {
+    .navMobile {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      display: unset;
+      .navMobileList {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 10px;
+        align-items: center;
+        svg {
+          transform: scale(1.2);
+          color: black;
+        }
+        .avatarBlock {
+          width: 32px;
+          height: 32px;
+          background-color: rgb(146, 24, 195);
+          border-radius: 50%;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

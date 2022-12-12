@@ -1,0 +1,36 @@
+$item-color-active: #4086e0;
+$time-color: rgb(214, 172, 188);
+$gradient-yellow-color: linear-gradient(
+  90deg,
+  #ffebef 11.19%,
+  #ffd3ca 39.94%,
+  #ffdd2d 100%
+);
+
+.itemFriend {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  padding: 15px 20px;
+  column-gap: 15px;
+  align-items: center;
+  //  background-color: $item-color-active;
+  color: rgb(63, 63, 63);
+  cursor: pointer;
+  &.active {
+    background-color: $gradient-yellow-color;
+  }
+  &:hover {
+    // background-color: #3a80db;
+    background: $gradient-yellow-color;
+    // color: white;
+  }
+  .timeAndResponse {
+    align-self: flex-start;
+    span {
+      font-weight: 500;
+      font-size: 15px;
+      color: $time-color;
+    }
+  }
+}

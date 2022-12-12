@@ -1,0 +1,55 @@
+.comment {
+  padding: 15px 20px;
+  //  border-bottom: 1px solid rgb(199, 199, 199);
+  background-color: rgb(254, 235, 239);
+  border-radius: 20px;
+  .userBlock {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 15px;
+    .linkBlock {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      cursor: pointer;
+      h3 {
+        font-weight: 700;
+      }
+    }
+
+    .correctTime {
+      font-size: 14px;
+      color: gray;
+    }
+  }
+  .text {
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 15px;
+  }
+  .footerComment {
+    display: flex;
+    align-items: center;
+    .answerBlock {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      position: relative;
+
+      a {
+        color: gray;
+        font-size: 15px;
+        &:hover {
+          color: #4086e0;
+        }
+      }
+      button svg {
+        transform: scale(0.8);
+      }
+      button:hover svg {
+        fill: #4086e0;
+      }
+    }
+  }
+}

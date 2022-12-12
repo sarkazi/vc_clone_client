@@ -1,0 +1,16 @@
+.btnBlue {
+  text-transform: unset;
+  background-color: #4683d9;
+  font-size: 15px;
+  color: white;
+  border-radius: 6px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  &:disabled {
+    color: white;
+  }
+}
+.btnBlue.btnWide {
+  width: 100%;
+  padding: 14px 15px;
+}

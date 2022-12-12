@@ -1,0 +1,58 @@
+.title {
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.returnBlock {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+  cursor: pointer;
+  svg {
+    transform: rotate(90deg);
+    fill: gray;
+  }
+  span {
+    color: gray;
+  }
+}
+
+.formInputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.linksBlock {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  .enterBtnBlock {
+    color: rgb(99, 99, 99);
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+  .onRegister {
+    color: #3766a9;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: flex-start;
+    &:hover {
+      color: rgb(227, 0, 76);
+    }
+  }
+}
+
+.alertBlock {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

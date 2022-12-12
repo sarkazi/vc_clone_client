@@ -1,0 +1,35 @@
+.commentBlock {
+  padding: 40px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  @media (max-width: 750px) {
+    & {
+      border-radius: 0;
+    }
+  }
+  .commentsContainer {
+    max-width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    @media (max-width: 750px) {
+      & {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+    }
+    .title {
+      font-size: 22px;
+      line-height: 1.4em;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+  }
+  .line {
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    height: 1px;
+    margin-bottom: 30px;
+  }
+}

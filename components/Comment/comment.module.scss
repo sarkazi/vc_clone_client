@@ -1,0 +1,41 @@
+.commentBlock {
+  display: flex;
+  flex-direction: column;
+  .userBlock {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    h3 {
+      font-weight: 700;
+      font-size: 15px;
+      &:hover {
+        color: rgb(72, 106, 216);
+      }
+    }
+    .correctTime {
+      font-size: 13px;
+      color: gray;
+      white-space: nowrap;
+    }
+  }
+  .comment {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .linkBlock {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .linkPost {
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+
+      &:hover {
+        color: rgb(72, 106, 216);
+      }
+    }
+  }
+}

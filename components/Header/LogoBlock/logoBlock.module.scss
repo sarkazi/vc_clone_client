@@ -1,0 +1,17 @@
+.logoBlock {
+  grid-column-start: 1;
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  color: rgb(206, 206, 206);
+  &.margin {
+    margin-bottom: 20px;
+  }
+  .logo {
+    width: 35px;
+  }
+  svg {
+    transform: scale(1.4);
+  }
+}

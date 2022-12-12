@@ -1,0 +1,52 @@
+.linkAdd {
+  grid-area: btn;
+  grid-column-start: 3;
+  justify-self: flex-end;
+  @media (max-width: 800px) {
+    & {
+      grid-column-start: 2;
+    }
+  }
+  @media (max-width: 620px) {
+    & {
+      grid-column-start: 3;
+    }
+  }
+}
+.buttonAdd {
+  box-shadow: 1px 1px 3px rgb(206, 206, 206);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: black;
+  text-transform: unset;
+  column-gap: 4px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 15px;
+  column-gap: 5px;
+  &.wide {
+    width: 100%;
+    padding: 12px 0;
+  }
+  &.wide span {
+    display: unset;
+  }
+  &.minHeight {
+    height: auto;
+  }
+  @media (max-width: 800px) {
+    & span {
+      display: none;
+    }
+  }
+  svg {
+    transform: scale(0.8);
+  }
+  &:hover {
+    box-shadow: 1px 3px 8px rgb(206, 206, 206);
+    background-color: white;
+  }
+}

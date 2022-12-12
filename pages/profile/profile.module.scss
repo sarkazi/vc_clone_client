@@ -1,0 +1,221 @@
+.profileWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  grid-column-start: 2;
+  overflow: hidden;
+  padding-top: 20px;
+  @media (max-width: 750px) {
+    & {
+      grid-column-start: 1;
+    }
+  }
+  .profileCover {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+
+    .inputAddCover {
+      display: none;
+    }
+    @media (max-width: 750px) {
+      & {
+        border-radius: 0;
+      }
+    }
+    .labelCover {
+      box-shadow: 0 1px 3px rgb(207, 207, 207);
+      padding: 10px 20px;
+      text-transform: unset;
+      color: black;
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      border-radius: 6px;
+      background-color: #fff;
+      @media (max-width: 750px) {
+        & {
+          padding: 7px 15px;
+        }
+      }
+      svg {
+        transform: scale(0.8);
+      }
+      span {
+        font-size: 16px;
+        font-weight: 500;
+        @media (max-width: 750px) {
+          & {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &.coverInstalled {
+      column-gap: 10px;
+      min-height: 250px;
+      background-size: cover;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      .labelCover {
+        transition: 0.2s all ease-in-out;
+        opacity: 0;
+      }
+      &:hover {
+        .labelCover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .profileBlock {
+    grid-column-start: 2;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 20px 0 20px;
+    position: relative;
+    @media (max-width: 750px) {
+      & {
+        border-radius: 0;
+      }
+    }
+    .contentBlock {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      overflow: hidden;
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      .avatarBlock {
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(123, 76, 204);
+        border-radius: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        span {
+          font-size: 70px;
+          color: white;
+        }
+        @media (max-width: 670px) {
+          & {
+            width: 80px;
+            height: 80px;
+            font-size: 40px;
+          }
+        }
+        .editingPhotoInput {
+          display: none;
+        }
+        .editingPhotoBlock {
+          display: none;
+        }
+        &:hover .editingPhotoBlock {
+          position: absolute;
+          bottom: 7px;
+          right: 7px;
+          background-color: #fff;
+          width: 29px;
+          height: 29px;
+          border-radius: 4px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          svg {
+            color: rgb(65, 65, 65);
+            transform: scale(0.95);
+          }
+        }
+      }
+      .name {
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        @media (max-width: 670px) {
+          & {
+            font-size: 32px;
+          }
+        }
+      }
+      .changeAbout {
+        margin-bottom: 20px;
+        color: #3766a9;
+        &:hover {
+          color: rgb(224, 0, 0);
+        }
+      }
+      .dataReg {
+        margin-bottom: 30px;
+      }
+      .allInfo {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100%;
+
+        .allInfo ul {
+          display: flex;
+          column-gap: 20px;
+        }
+        .allInfo ul li {
+          color: rgb(105, 105, 105);
+        }
+        .allInfo ul li.active {
+          border-bottom: 4px solid #4086e0;
+          color: black;
+        }
+        .allInfo button {
+          padding: 0 0 15px 0;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .itemsSection {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    column-gap: 20px;
+    @media (max-width: 1000px) {
+      & {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+      }
+    }
+    .itemPost {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    .itemSubscribe {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      .subscribeItemBlock {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        @media (max-width: 750px) {
+          & {
+            border-radius: 0;
+          }
+        }
+        h3 {
+          font-size: 16px;
+          font-weight: 700;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

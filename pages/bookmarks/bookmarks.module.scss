@@ -1,0 +1,20 @@
+.ccBlock {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  grid-column-start: 2;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  .currentDataBlock {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 20px;
+    svg {
+      transform: scale(0.7);
+    }
+    .currentData {
+      font-size: 14px;
+    }
+  }
+}

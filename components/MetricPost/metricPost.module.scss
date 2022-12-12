@@ -1,0 +1,32 @@
+.metricMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  font-weight: 500;
+  color: rgb(79, 79, 79);
+  &.margin {
+    margin-bottom: 30px;
+  }
+  .actionsPostBlock {
+    display: flex;
+    column-gap: 20px;
+
+    .iconBlock {
+      display: flex;
+      align-items: center;
+      @media (max-width: 500px) {
+        &.noneResize {
+          display: none;
+        }
+      }
+      svg {
+        transform: scale(1);
+        fill: rgb(78, 78, 78);
+        &:hover {
+          fill: #4683d9;
+        }
+      }
+    }
+  }
+}

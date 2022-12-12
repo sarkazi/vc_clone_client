@@ -1,0 +1,85 @@
+$avatar-color-message: rgb(243, 212, 224);
+
+.avatarBlock {
+  background-color: rgb(146, 24, 195);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  &.modalHeaderProfile {
+    width: 50px;
+    height: 50px;
+    span {
+      font-size: 15px;
+    }
+  }
+  &.fullPost {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    span {
+      font-size: 15px;
+    }
+  }
+  &.headerAvatar {
+    width: 40px;
+    height: 40px;
+    span {
+      font-size: 15px;
+    }
+  }
+  &.ratingPage {
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    span {
+      font-size: 100px;
+    }
+  }
+  &.commentNews {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    span {
+      font-size: 12px;
+    }
+  }
+  &.globalComment {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    overflow: hidden;
+    justify-self: flex-start;
+    span {
+      font-size: 10px;
+    }
+  }
+  &.messagePageChatName {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $avatar-color-message;
+    span {
+      color: rgb(60, 60, 60);
+    }
+  }
+  &.messagePageAbout {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    background-color: $avatar-color-message;
+    span {
+      color: black;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+}

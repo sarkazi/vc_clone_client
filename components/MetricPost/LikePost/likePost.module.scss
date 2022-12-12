@@ -1,0 +1,31 @@
+.likePostBlock {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  margin-left: auto;
+  &.right {
+    justify-self: flex-end;
+  }
+  button:nth-child(1) {
+    transform: rotate(-90deg);
+  }
+  button:last-child {
+    transform: rotate(90deg);
+  }
+  svg {
+    transform: scale(1.3);
+  }
+  span {
+    font-size: 17px;
+    color: #2ea83a;
+  }
+  &.isComment {
+    column-gap: 2px;
+    svg {
+      transform: scale(1.1);
+    }
+    span {
+      font-size: 15px;
+    }
+  }
+}
